@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  background-color: #3B3B98;
+}
+button{
+  cursor: pointer;
+}
+button:active{
+
+  transform: scale(.9);
+ }
+
+.container{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container .data-form{
+  width: 90%;
+  padding: 10px;
+  margin: 20px auto;
+  display: flex
+}
+.container .data-form input{
+  width: 80%;
+  padding:15px;
+  border: none;
+  border: 1px solid rgb(194, 188, 188);
+  background-color: #CAD3C8;
+  border-radius: 10px 0px 0px 10px;
+ 
+}
+.container .data-form input::placeholder{
+ font-size: 15px;
+ color: black;
+ font-weight: 700;
+ 
+}
+.container .data-form button[type="submit"]{
+ padding: 15px;
+ border: none;
+ width: 20%;
+ border-radius: 0px 10px 10px 0px;
+ border: 1px solid rgb(194, 188, 188);
+ cursor: pointer;
+ transition: all 0.3s linear;
+ background-color: #182C61;
+ color: white;
+ 
+}
+
+
+.todos{
+  width: 90%;
+  margin: 20px auto;
+  background-color: #2C3A47;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  flex-direction: column;
+  gap: 20px;
+}
+.todos .right button{
+padding: 10px;
+border: none;
+}
+.todos > .left{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+}
+
+.task-data{
+  word-spacing: 5px;
+  line-height: 1.3;
+  padding: 10px;
+
+}
+.todos > .left >input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  accent-color: green;
+  cursor: pointer;
+}
+.todos > .right{
+  width: 25%;
+  display: flex;
+  gap: 10px;
+  
+}
+.todos .right button:first-child{
+background-color: skyblue;
+border-radius: 10px;
+flex:1;
+}
+.todos .right button:last-child{
+background-color: crimson;
+color: white;
+border-radius: 10px;
+flex:1;
+}
+
+.task-complete{
+  text-decoration: line-through;
+}
+
+.range{
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+}
+.range >progress{
+  width:  100%;
+  transition: all 0.3s linear;
+}
+
+
+@media screen and (width < 550px) {
+  .task-data{
+    font-size: 15px;
+  }
+
+  .todos > .left >input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+
+@media screen and (width < 450px) {
+  .todos {
+    width: 97%;
+    padding: 20px 10px;
+  }
+
+  .todos > .left {
+    width: 100%;
+  }
+  .todos > .right {
+    width: 100%;
+  }
+
+}
+
+@media screen and (width < 330px) {
+  .todos > .right{
+    justify-content: center;
+  }
+  .todos > .right> button {
+     padding: 5px 10px;
+  }
+ 
+
+.container .data-form input {
+  padding: 10px;
+}
+.container .data-form button[type="submit"] {
+  padding: 10px;
+}
+
+.container .data-form input::placeholder{
+  font-size: 10px;
+ }
+
+ .container .data-form input{
+  width: 70%;
+ 
+}
+
+.container .data-form button[type="submit"]{
+  width: 30%;
+  font-size: 10px;
+ }
+}
